@@ -1,0 +1,12 @@
+{
+  "name": "iron-arc-app",
+  "private": true,
+  "description": "Releases, screenshots and notes for the Iron Arc Android app.",
+  "type": "module",
+  "scripts": {
+    "mockups": "node tools/mockups/build.mjs"
+  },
+  "devDependencies": {
+    "qrcode": "1.5.4"
+  }
+}
