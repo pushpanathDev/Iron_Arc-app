@@ -237,10 +237,14 @@ Updates: download the newest release and install it over the old one. Your data 
 
 ---
 
-<div align="center">
+ <div align="center">
 
-**Designed and built solo by [Pushpanath](https://github.com/pushpanathDev)**: product, design, mobile app, backend, AI and release.
+**Designed, built, debugged, broke, fixed, and shipped by [Pushpanath](https://github.com/pushpanathDev) — the one and only.** 🫡
 
-<sub>This repository holds releases, screenshots and engineering notes; the source code is private.<br/>© 2026 Pushpanath. All rights reserved.</sub>
+<sub>Product? Me. Design? Me. Mobile app? Me. Backend? Also me. AI? Me again. QA? Unfortunately, also me.</sub>
+
+<sub>This repository contains releases, screenshots, and engineering notes. The source code stays private — some secrets are best kept secret. 😉</sub>
+
+<sub>© 2026 Pushpanath. All rights reserved. No co-founders were harmed in the making of this project.</sub>
 
 </div>
