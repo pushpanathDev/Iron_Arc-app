@@ -26,13 +26,30 @@
   <img src="email-logo.png" alt="Iron Arc logo">
   <h1>Iron Arc</h1>
   <p>Log lifts in seconds, see real progress, and train to an AI plan that fits your week.</p>
-  <a class="download" href="https://github.com/pushpanathDev/Iron_Arc-app/releases/latest/download/Iron-Arc.apk">Download for Android</a>
-  <p class="note">Android 7.0 or newer · free · no ads, no analytics, no trackers</p>
+  <!-- Without the script (or if GitHub can't be reached) this opens the latest release's page. -->
+  <a class="download" id="download" href="https://github.com/pushpanathDev/Iron_Arc-app/releases/latest">Download for Android</a>
+  <p class="note" id="version">Android 7.0 or newer · free · no ads, no analytics, no trackers</p>
   <nav>
     <a href="privacy.html">Privacy policy</a>
     <a href="https://github.com/pushpanathDev/Iron_Arc-app/releases">All releases</a>
     <a href="https://github.com/pushpanathDev/Iron_Arc-app">About</a>
   </nav>
 </main>
+<script>
+  // The newest release's APK, whatever it's called (each one carries its version, e.g. Iron-Arc-2.1.0.apk).
+  fetch("https://api.github.com/repos/pushpanathDev/Iron_Arc-app/releases/latest")
+    .then((res) => (res.ok ? res.json() : null))
+    .then((release) => {
+      const apk = release && release.assets.find((asset) => asset.name.endsWith(".apk"));
+      if (!apk) return;
+      const version = release.tag_name.replace(/^v/, "");
+      const button = document.getElementById("download");
+      button.href = apk.browser_download_url;
+      button.textContent = "Download v" + version;
+      const sizeMb = Math.round(apk.size / 1e6);
+      document.getElementById("version").textContent = "Iron Arc " + version + " for Android 7.0 or newer · " + sizeMb + " MB · free · no ads, no analytics, no trackers";
+    })
+    .catch(() => {});
+</script>
 </body>
 </html>

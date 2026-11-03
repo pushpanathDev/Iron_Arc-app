@@ -6,7 +6,7 @@
 
 <br/>
 
-<a href="https://github.com/pushpanathDev/Iron_Arc-app/releases/latest/download/Iron-Arc.apk"><img src="https://img.shields.io/badge/Download-APK%20for%20Android-22D47F?style=for-the-badge&logo=android&logoColor=white" alt="Download the APK" height="40" /></a>
+<a href="https://pushpanathdev.github.io/Iron_Arc-app/"><img src="https://img.shields.io/badge/Download-APK%20for%20Android-22D47F?style=for-the-badge&logo=android&logoColor=white" alt="Download the APK" height="40" /></a>
 &nbsp;
 <a href="https://github.com/pushpanathDev/Iron_Arc-app/releases/latest"><img src="https://img.shields.io/github/v/release/pushpanathDev/Iron_Arc-app?style=for-the-badge&label=latest&color=1E6B47" alt="Latest release" height="40" /></a>
 
@@ -26,7 +26,7 @@
 <td width="180" align="center"><img src="docs/images/qr-download.png" width="160" alt="QR code to download Iron Arc" /></td>
 <td>
 
-**Scan to install on Android.** The QR code opens the latest APK straight from this repository's releases.
+**Scan to install on Android.** The QR code opens the download page, which always offers the latest version.
 
 Android 7.0 or newer · free · **no ads, no analytics, no trackers**. Sign in with Google or email; your training lives in your account, so a new phone picks up where the old one left off.
 
@@ -229,7 +229,7 @@ flowchart LR
 
 ## 📦 Installing the APK
 
-1. On your Android phone, scan the QR code above or tap **Download APK for Android**.
+1. On your Android phone, scan the QR code above or tap **Download APK for Android**, then **Download** on the page that opens. Every APK carries its version in its name (`Iron-Arc-2.0.1.apk`), so older downloads are easy to tell apart.
 2. Open the downloaded file. If Android asks, allow your browser to install apps.
 3. Sign in with Google or email, answer a few questions about your training, and log your first set.
 

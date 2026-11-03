@@ -4,7 +4,7 @@
  *   docs/images/hero.png           banner for the top of the README
  *   docs/images/social-preview.png 1280×640, for GitHub's Settings → Social preview
  *   docs/images/themes.png         Home in each of the five themes
- *   docs/images/qr-download.png    QR code to the latest APK
+ *   docs/images/qr-download.png    QR code to the download page (it always offers the latest APK)
  * Pages are laid out in HTML and captured with Microsoft Edge or Chrome, headless.
  * Usage: npm run mockups   (set BROWSER=<path> if the browser isn't found)
  */
@@ -19,7 +19,9 @@ const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), "../..");
 const SHOTS = process.env.SHOTS_DIR ?? join(ROOT, "docs/screenshots");
 const OUT = process.env.OUT_DIR ?? join(ROOT, "docs");
 const VERSION = "2.0.1";
-const DOWNLOAD = "https://github.com/pushpanathDev/Iron_Arc-app/releases/latest/download/Iron-Arc.apk";
+// The download page (docs/index.html on GitHub Pages): APKs carry their version in their names, so
+// there's no fixed "latest" file to link; the page finds the newest one.
+const DOWNLOAD = "https://pushpanathdev.github.io/Iron_Arc-app/";
 
 /** Every screen in the README gallery: file name in docs/screenshots, and its caption. */
 export const SCREENS = [
