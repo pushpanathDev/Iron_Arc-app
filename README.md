@@ -222,7 +222,6 @@ flowchart LR
 - [x] Move a session to another day
 - [ ] Reminders that name the day's planned session
 - [ ] A much larger AI exercise catalogue (flies, crossovers, machine work)
-- [ ] Coach v2: an AI coach with memory of your training and trends
 - [ ] Iron Arc Pro
 
 ---
