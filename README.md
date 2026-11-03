@@ -52,12 +52,12 @@ Android 7.0 or newer · free · **no ads, no analytics, no trackers**. Sign in w
 
 <div align="center">
 
-| <img src="docs/mockups/home.png" width="230" /> | <img src="docs/mockups/log.png" width="230" /> | <img src="docs/mockups/analytics.png" width="230" /> |
+| <img src="docs/mockups/home.png" width="230" alt="Home screen: today's session, weekly goal ring and streak" /> | <img src="docs/mockups/log.png" width="230" alt="Logging a set with last time's weight and reps" /> | <img src="docs/mockups/analytics.png" width="230" alt="Analytics with the muscle body map" /> |
 |:---:|:---:|:---:|
 | **Home**<br/><sub>today's session, weekly goal ring, streak and a headline that cheers you on</sub> | **Logging a set**<br/><sub>last time's weight and reps prefilled; one tap per set</sub> | **Analytics**<br/><sub>a body map shaded by weekly sets per muscle, records and trends</sub> |
-| <img src="docs/mockups/plan.png" width="230" /> | <img src="docs/mockups/coach.png" width="230" /> | <img src="docs/mockups/history.png" width="230" /> |
+| <img src="docs/mockups/plan.png" width="230" alt="AI plan day view with exercises and swaps" /> | <img src="docs/mockups/coach.png" width="230" alt="Plan coach chat updating the week" /> | <img src="docs/mockups/history.png" width="230" alt="History calendar with a session opened" /> |
 | **AI plan**<br/><sub>a week built from your days, equipment and experience</sub> | **Plan coach**<br/><sub>"make it 3 days", "my shoulder hurts": the plan adjusts</sub> | **History**<br/><sub>a calendar of every session; move one to another day in a tap</sub> |
-| <img src="docs/mockups/report.png" width="230" /> | <img src="docs/mockups/weight.png" width="230" /> | <img src="docs/mockups/achievements.png" width="230" /> |
+| <img src="docs/mockups/report.png" width="230" alt="Monthly report export" /> | <img src="docs/mockups/weight.png" width="230" alt="Body weight trend and goal" /> | <img src="docs/mockups/achievements.png" width="230" alt="Achievements and badges" /> |
 | **Monthly report**<br/><sub>a 3-page PDF and a 4-sheet Excel file, made on the phone</sub> | **Body weight**<br/><sub>trend, goal and a weekly weigh-in reminder</sub> | **Achievements**<br/><sub>28 badges for consistency, volume, records and variety</sub> |
 
 </div>
@@ -234,6 +234,8 @@ flowchart LR
 3. Sign in with Google or email, answer a few questions about your training, and log your first set.
 
 Updates: download the newest release and install it over the old one. Your data stays in your account.
+
+What Iron Arc keeps and why: the [privacy policy](https://pushpanathdev.github.io/Iron_Arc-app/privacy.html).
 
 ---
 

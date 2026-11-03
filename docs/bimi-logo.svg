@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.2" baseProfile="tiny-ps" viewBox="0 0 1024 1024">
+<title>Iron Arc</title>
+<rect width="1024" height="1024" fill="#000000"/>
+<path d="M700,222 A322,322 0 1,0 616,826 A311,318 0 1,1 700,222 Z" fill="#FFFFFF"/>
+<g fill="none" stroke="#FFFFFF" stroke-linejoin="miter" stroke-linecap="butt">
+<g stroke-width="9">
+<path d="M384,380 V418"/>
+<path d="M432,418 V380 H450 A10,10 0 0,1 450,400 H432 M448,400 L462,418"/>
+<path d="M540,380 A19,19 0 1,0 540.1,380 Z"/>
+<path d="M602,418 V380 L632,418 V380"/>
+</g>
+<g stroke-width="34">
+<path d="M330,597 L397,462 L464,597"/>
+<path d="M502,597 V472 H560 A38,38 0 0,1 560,548 H502 M552,548 L606,597"/>
+<path d="M773,478 A72,72 0 1,0 773,580"/>
+</g>
+</g>
+</svg>
