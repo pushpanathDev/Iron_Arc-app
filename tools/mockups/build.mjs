@@ -6,9 +6,10 @@
  *   docs/images/themes.png         Home in each of the five themes
  *   docs/images/qr-download.png    QR code to the download page (it always offers the latest APK)
  *   docs/images/stats.png          "By the numbers" (the figures are in STATS below)
+ *   docs/images/download.png       the download card: a download button and the QR code (no version: never rebuilt)
  * Pages are laid out in HTML and captured with Microsoft Edge or Chrome, headless.
  * Usage: npm run mockups               every image
- *        npm run mockups -- stats hero  only those (mockups, hero, themes, qr, stats)
+ *        npm run mockups -- stats hero  only those (mockups, hero, themes, qr, stats, download)
  * Set BROWSER=<path> if the browser isn't found.
  */
 import { execFileSync } from "node:child_process";
@@ -208,6 +209,49 @@ async function qr() {
   console.log("  ✓", out.replace(ROOT, "").replace(/\\/g, "/"));
 }
 
+/** The download card under the hero: what you get, one big button, and the QR code for a phone. No version in it, so it never goes stale (the README's "latest" badge shows the version). */
+async function download() {
+  const code = await QRCode.toDataURL(DOWNLOAD, { width: 360, margin: 1, errorCorrectionLevel: "M", color: { dark: "#111417", light: "#FFFFFF" } });
+  const icon = pathToFileURL(join(ROOT, "docs/images/icon.png")).href;
+  const arrow = `<svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11"/><path d="m7 10 5 5 5-5"/><path d="M5 20h14"/></svg>`;
+  const body = `
+  <div class="card">
+    <div class="about">
+      <img class="icon" src="${icon}">
+      <div>
+        <div class="kicker">FREE FOR ANDROID</div>
+        <h2 class="cond">GET IRON ARC</h2>
+        <div class="meta"><span>Android 7.0+</span><span>No ads</span><span>No trackers</span></div>
+      </div>
+    </div>
+    <div class="cta">${arrow}<div><b>Download APK</b><small>Always the latest version</small></div></div>
+    <div class="qr"><img src="${code}"><span>On a computer?<br><b>Scan with<br>your phone</b></span></div>
+  </div>`;
+  const css = `
+  body { width: 1280px; height: 250px; padding: 10px; }
+  .card { height: 230px; border-radius: 28px; padding: 0 30px 0 40px; display: flex; align-items: center; gap: 40px;
+    background:
+      radial-gradient(520px 260px at 62% 50%, rgba(34,212,127,0.20), transparent 70%),
+      linear-gradient(160deg, #171B1F 0%, #0B0E11 100%);
+    box-shadow: 0 0 0 1px rgba(255,255,255,0.07), inset 0 1px 0 rgba(255,255,255,0.06); }
+  .about { flex: 1; display: flex; align-items: center; gap: 24px; }
+  .icon { width: 96px; height: 96px; border-radius: 24px; box-shadow: 0 10px 28px rgba(0,0,0,0.5); }
+  .kicker { font-size: 13px; font-weight: 600; letter-spacing: 0.32em; color: #22D47F; }
+  h2 { font-size: 54px; line-height: 1; letter-spacing: 0.06em; margin-top: 8px; }
+  .meta { display: flex; gap: 8px; margin-top: 14px; }
+  .meta span { white-space: nowrap; font-size: 13px; font-weight: 600; padding: 6px 12px; border-radius: 999px; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.10); color: #C9CED3; }
+  .cta { display: flex; align-items: center; gap: 16px; padding: 22px 34px 22px 28px; border-radius: 20px; color: #00240F;
+    background: linear-gradient(#3BE08E, #18B96C 55%, #0B9455);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.30), 0 0 0 1px rgba(34,212,127,0.35), 0 14px 40px rgba(34,212,127,0.28); }
+  .cta b { display: block; font-size: 26px; font-weight: 700; }
+  .cta small { display: block; font-size: 13px; font-weight: 600; opacity: 0.7; margin-top: 2px; }
+  .qr { display: flex; align-items: center; gap: 18px; padding-left: 34px; border-left: 1px solid rgba(255,255,255,0.08); height: 150px; }
+  .qr img { width: 150px; height: 150px; border-radius: 14px; background: #fff; padding: 6px; }
+  .qr span { font-size: 14px; line-height: 1.45; color: #7D8790; }
+  .qr b { color: #E1E2E7; font-weight: 600; }`;
+  render(page(body, css), join(OUT, "images", "download.png"), 1280, 250);
+}
+
 const only = process.argv.slice(2);
 const want = (name) => only.length === 0 || only.includes(name);
 
@@ -220,3 +264,4 @@ if (want("hero")) {
 if (want("themes")) themes();
 if (want("qr")) await qr();
 if (want("stats")) stats();
+if (want("download")) await download();

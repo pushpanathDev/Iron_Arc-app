@@ -1,17 +1,18 @@
 <div align="center">
 
-<img src="docs/images/hero.png" alt="Iron Arc: log lifts in seconds, see real progress, train to an AI plan that fits your week" width="100%" />
+<a href="https://pushpanathdev.github.io/Iron_Arc-app/"><img src="docs/images/hero.png" alt="Iron Arc: log lifts in seconds, see real progress, train to an AI plan that fits your week" width="100%" /></a>
 
 ### A strength-training app that remembers every set, knows when you got stronger,<br/>and builds your training week with AI.
 
 <br/>
 
-<a href="https://pushpanathdev.github.io/Iron_Arc-app/"><img src="https://img.shields.io/badge/Download-APK%20for%20Android-22D47F?style=for-the-badge&logo=android&logoColor=white" alt="Download the APK" height="40" /></a>
-&nbsp;
-<a href="https://github.com/pushpanathDev/Iron_Arc-app/releases/latest"><img src="https://img.shields.io/github/v/release/pushpanathDev/Iron_Arc-app?style=for-the-badge&label=latest&color=1E6B47" alt="Latest release" height="40" /></a>
+<a href="https://pushpanathdev.github.io/Iron_Arc-app/"><img src="docs/images/download.png" width="100%" alt="Download Iron Arc for Android: tap here to download the APK, or scan the QR code with your phone" /></a>
+
+<sub>Tap the card to download, or scan its code with your phone · Android 7.0 or newer · free · <b>no ads, no analytics, no trackers</b></sub>
 
 <br/><br/>
 
+![Latest release](https://img.shields.io/github/v/release/pushpanathDev/Iron_Arc-app?label=latest&color=1E6B47)
 ![Expo SDK 54](https://img.shields.io/badge/Expo-SDK%2054-000020?logo=expo&logoColor=white)
 ![React Native 0.81](https://img.shields.io/badge/React%20Native-0.81%20·%20New%20Arch-61DAFB?logo=react&logoColor=black)
 ![TypeScript](https://img.shields.io/badge/TypeScript-strict-3178C6?logo=typescript&logoColor=white)
@@ -21,18 +22,7 @@
 
 </div>
 
-<table>
-<tr>
-<td width="180" align="center"><img src="docs/images/qr-download.png" width="160" alt="QR code to download Iron Arc" /></td>
-<td>
-
-**Scan to install on Android.** The QR code opens the download page, which always offers the latest version.
-
-Android 7.0 or newer · free · **no ads, no analytics, no trackers**. Sign in with Google or email; your training lives in your account, so a new phone picks up where the old one left off.
-
-</td>
-</tr>
-</table>
+<p align="center">Sign in with Google or email. Your training lives in your account, so a new phone picks up where the old one left off.</p>
 
 ---
 
@@ -230,7 +220,7 @@ flowchart LR
 
 ## 📦 Installing the APK
 
-1. On your Android phone, scan the QR code above or tap **Download APK for Android**, then **Download** on the page that opens. Every APK carries its version in its name (`Iron-Arc-2.1.0.apk`), so older downloads are easy to tell apart.
+1. On your Android phone, tap **Download APK** in the card at the top (on a computer, scan its QR code), then **Download** on the page that opens. Every APK carries its version in its name (`Iron-Arc-2.1.0.apk`), so older downloads are easy to tell apart.
 2. Open the downloaded file. If Android asks, allow your browser to install apps.
 3. Sign in with Google or email, answer a few questions about your training, and log your first set.
 
