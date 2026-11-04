@@ -5,8 +5,11 @@
  *   docs/images/social-preview.png 1280×640, for GitHub's Settings → Social preview
  *   docs/images/themes.png         Home in each of the five themes
  *   docs/images/qr-download.png    QR code to the download page (it always offers the latest APK)
+ *   docs/images/stats.png          "By the numbers" (the figures are in STATS below)
  * Pages are laid out in HTML and captured with Microsoft Edge or Chrome, headless.
- * Usage: npm run mockups   (set BROWSER=<path> if the browser isn't found)
+ * Usage: npm run mockups               every image
+ *        npm run mockups -- stats hero  only those (mockups, hero, themes, qr, stats)
+ * Set BROWSER=<path> if the browser isn't found.
  */
 import { execFileSync } from "node:child_process";
 import { existsSync, mkdirSync, rmSync, writeFileSync } from "node:fs";
@@ -18,7 +21,7 @@ import QRCode from "qrcode";
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), "../..");
 const SHOTS = process.env.SHOTS_DIR ?? join(ROOT, "docs/screenshots");
 const OUT = process.env.OUT_DIR ?? join(ROOT, "docs");
-const VERSION = "2.0.1";
+const VERSION = "2.1.0";
 // The download page (docs/index.html on GitHub Pages): APKs carry their version in their names, so
 // there's no fixed "latest" file to link; the page finds the newest one.
 const DOWNLOAD = "https://pushpanathdev.github.io/Iron_Arc-app/";
@@ -35,6 +38,16 @@ export const SCREENS = [
   ["weight", "Body weight"],
   ["achievements", "Achievements"],
   ["themes", "Themes"],
+];
+
+/** "By the numbers": figure, what it counts, and a quiet detail line. Update with each release. */
+const STATS = [
+  ["465", "automated tests", "202 app · 263 server"],
+  ["30K+", "lines of TypeScript", "in 242 files"],
+  ["19", "screens", "one design system"],
+  ["95", "exercises for AI plans", "each tagged by joint load"],
+  ["5", "themes", "switched live"],
+  ["0", "log lines", "in a release build"],
 ];
 
 const THEMES = [
@@ -165,15 +178,45 @@ function themes() {
   render(page(body, css, "#0B0E11"), join(OUT, "images", "themes.png"), 1280, 650);
 }
 
+function stats() {
+  const body = `
+  <div class="card">
+    <div class="kicker">BY THE NUMBERS</div>
+    <div class="row">${STATS.map(([figure, label, detail]) => `<div class="stat"><div class="figure cond">${figure}</div><div class="label">${label}</div><div class="detail">${detail}</div></div>`).join("")}</div>
+  </div>`;
+  const css = `
+  body { width: 1280px; height: 262px; padding: 10px; }
+  .card { position: relative; height: 242px; border-radius: 28px; padding: 34px 40px 0; overflow: hidden;
+    background:
+      radial-gradient(620px 260px at 50% -40%, rgba(34,212,127,0.22), transparent 70%),
+      linear-gradient(160deg, #171B1F 0%, #0B0E11 100%);
+    box-shadow: 0 0 0 1px rgba(255,255,255,0.07), inset 0 1px 0 rgba(255,255,255,0.06); }
+  .kicker { text-align: center; font-size: 13px; font-weight: 600; letter-spacing: 0.32em; color: #22D47F; }
+  .row { display: flex; margin-top: 30px; }
+  .stat { flex: 1; text-align: center; padding: 0 10px; }
+  .stat + .stat { border-left: 1px solid rgba(255,255,255,0.08); }
+  .figure { font-size: 76px; line-height: 1; letter-spacing: 0.01em;
+    background: linear-gradient(180deg, #FFFFFF 10%, #A9F2CC 100%); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .label { margin-top: 14px; font-size: 16px; font-weight: 600; color: #E1E2E7; }
+  .detail { margin-top: 5px; font-size: 13px; color: #7D8790; }`;
+  render(page(body, css), join(OUT, "images", "stats.png"), 1280, 262);
+}
+
 async function qr() {
   const out = join(OUT, "images", "qr-download.png");
   await QRCode.toFile(out, DOWNLOAD, { width: 360, margin: 2, errorCorrectionLevel: "M", color: { dark: "#111417", light: "#FFFFFF" } });
   console.log("  ✓", out.replace(ROOT, "").replace(/\\/g, "/"));
 }
 
+const only = process.argv.slice(2);
+const want = (name) => only.length === 0 || only.includes(name);
+
 console.log("Iron Arc mockups");
-mockups();
-hero(join(OUT, "images", "hero.png"), 2);
-hero(join(OUT, "images", "social-preview.png"), 1);
-themes();
-await qr();
+if (want("mockups")) mockups();
+if (want("hero")) {
+  hero(join(OUT, "images", "hero.png"), 2);
+  hero(join(OUT, "images", "social-preview.png"), 1);
+}
+if (want("themes")) themes();
+if (want("qr")) await qr();
+if (want("stats")) stats();

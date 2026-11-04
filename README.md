@@ -17,7 +17,7 @@
 ![TypeScript](https://img.shields.io/badge/TypeScript-strict-3178C6?logo=typescript&logoColor=white)
 ![Node.js](https://img.shields.io/badge/Node.js-Express%205-339933?logo=nodedotjs&logoColor=white)
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-Prisma-4169E1?logo=postgresql&logoColor=white)
-![Tests](https://img.shields.io/badge/tests-311%20passing-22D47F?logo=jest&logoColor=white)
+![Tests](https://img.shields.io/badge/tests-465%20passing-22D47F?logo=jest&logoColor=white)
 
 </div>
 
@@ -36,15 +36,7 @@ Android 7.0 or newer · free · **no ads, no analytics, no trackers**. Sign in w
 
 ---
 
-## ⚡ By the numbers
-
-<div align="center">
-
-| 🧪 **311** | 🧱 **27,000+** | 📱 **16** | 🎨 **5** | 🏅 **28** | 🔇 **0** |
-|:---:|:---:|:---:|:---:|:---:|:---:|
-| automated tests<br/><sub>169 app · 142 server</sub> | lines of TypeScript<br/><sub>in 220 files</sub> | screens | themes, switched<br/>live | achievement badges | log lines in a<br/>release build |
-
-</div>
+<div align="center"><img src="docs/images/stats.png" width="100%" alt="By the numbers: 465 automated tests (202 app, 263 server), 30,000+ lines of TypeScript in 242 files, 19 screens, 95 exercises for AI plans, 5 themes, 0 log lines in a release build" /></div>
 
 ---
 
@@ -72,12 +64,15 @@ Themes aren't a colour swap. Each one changes the **accent family** (buttons, pr
 
 ---
 
-## 🆕 What's new in 2.0.1
+## 🆕 What's new in 2.1.0
 
-- **Move a whole session to another day.** Logged on the wrong day? History → open the session → **Change date**. All of it moves in one database transaction, so it can never end up half on one day and half on another.
-- **A date picker that follows your theme.** Android's own date dialog can't change colour at runtime, so the app now uses its own calendar: theme-coloured, with dots on the days you trained (or weighed in).
+- **Iron Arc Pro.** Unlimited AI plans and the plan coach chat, with a 7-day free trial. Free keeps one AI plan every 30 days. Payments are in test mode for now: no real money is charged.
+- **Go easy on your joints.** Pick knees, lower back, shoulders or wrists (or write your own), and plans and swaps leave out the exercises that load them.
+- **95 exercises for AI plans**, up from 32, each tagged with the joints it loads.
+- **A safer coach.** A health check first, Safe mode until a doctor clears you, and a way to rate or report any reply.
+- **Reminders that name the day's session**, settings that follow your account, and **updates in the app** (Profile → App updates checks any time).
 
-See the [changelog](CHANGELOG.md) for 2.0.0, the big one: themes, the monthly report, calendar plan weeks and more.
+See the [changelog](CHANGELOG.md) for everything, and for 2.0.1 and 2.0.0.
 
 ---
 
@@ -208,7 +203,7 @@ flowchart LR
 | **Server** | Node.js · Express 5 · Prisma · PostgreSQL · Zod validation |
 | **AI** | A hosted LLM for plan generation, weekly recalibration, swaps and the coach |
 | **Auth** | Firebase Authentication (Google and email) |
-| **Quality** | Jest and Node's test runner: 311 tests across app and server |
+| **Quality** | Jest and Node's test runner: 465 tests across app and server |
 
 ---
 
@@ -220,20 +215,22 @@ flowchart LR
 - [x] Five themes and a theme-aware date picker
 - [x] Monthly PDF and Excel reports
 - [x] Move a session to another day
-- [ ] Reminders that name the day's planned session
-- [ ] A much larger AI exercise catalogue (flies, crossovers, machine work)
+- [x] Reminders that name the day's planned session
+- [x] A much larger AI exercise catalogue (flies, crossovers, machine work)
+- [x] Iron Arc Pro (payments in test mode)
+- [x] Health check, Safe mode and "go easy on" joints
+- [ ] Real payments
 - [ ] Coach v2: an AI coach with memory of your training and trends
-- [ ] Iron Arc Pro
 
 ---
 
 ## 📦 Installing the APK
 
-1. On your Android phone, scan the QR code above or tap **Download APK for Android**, then **Download** on the page that opens. Every APK carries its version in its name (`Iron-Arc-2.0.1.apk`), so older downloads are easy to tell apart.
+1. On your Android phone, scan the QR code above or tap **Download APK for Android**, then **Download** on the page that opens. Every APK carries its version in its name (`Iron-Arc-2.1.0.apk`), so older downloads are easy to tell apart.
 2. Open the downloaded file. If Android asks, allow your browser to install apps.
 3. Sign in with Google or email, answer a few questions about your training, and log your first set.
 
-Updates: download the newest release and install it over the old one. Your data stays in your account.
+Updates: from 2.1.0 the app tells you when a new version is out and links to it; install it over the old one. Your data stays in your account.
 
 What Iron Arc keeps and why: the [privacy policy](https://pushpanathdev.github.io/Iron_Arc-app/privacy.html).
 
