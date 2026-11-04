@@ -215,12 +215,18 @@ flowchart LR
 - [x] Five themes and a theme-aware date picker
 - [x] Monthly PDF and Excel reports
 - [x] Move a session to another day
+<<<<<<< HEAD
 - [x] Reminders that name the day's planned session
 - [x] A much larger AI exercise catalogue (flies, crossovers, machine work)
 - [x] Iron Arc Pro (payments in test mode)
 - [x] Health check, Safe mode and "go easy on" joints
 - [ ] Real payments
 - [ ] Coach v2: an AI coach with memory of your training and trends
+=======
+- [ ] Reminders that name the day's planned session
+- [ ] A much larger AI exercise catalogue (flies, crossovers, machine work)
+- [ ] Iron Arc Pro
+>>>>>>> d7b8e8862c4b55120f243f7f523801e9bb53e27a
 
 ---
 
