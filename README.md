@@ -209,23 +209,22 @@ flowchart LR
 
 ## 🗺 Roadmap
 
-- [x] Fast logging with records, rest timer and plate calculator
-- [x] AI plans with weekly recalibration and a plan coach
-- [x] Analytics with a muscle body map
-- [x] Five themes and a theme-aware date picker
-- [x] Monthly PDF and Excel reports
-- [x] Move a session to another day
-<<<<<<< HEAD
-- [x] Reminders that name the day's planned session
-- [x] A much larger AI exercise catalogue (flies, crossovers, machine work)
-- [x] Iron Arc Pro (payments in test mode)
-- [x] Health check, Safe mode and "go easy on" joints
-- [ ] Real payments
-- [ ] Coach v2: an AI coach with memory of your training and trends
-=======
-- [ ] Reminders that name the day's planned session
-- [ ] A much larger AI exercise catalogue (flies, crossovers, machine work)
-- [ ] Iron Arc Pro
+| Status | Feature |
+|:--|:--|
+| <img src="https://img.shields.io/badge/up%20next-C98A2B?style=flat-square" alt="Up next" /> | **Speak your sets:** say "bench, 80 kilos, 8 reps" and the set fills itself in |
+| <img src="https://img.shields.io/badge/up%20next-C98A2B?style=flat-square" alt="Up next" /> | **A super-powered coach:** a big upgrade to today's coach, with memory of your training and trends |
+| <img src="https://img.shields.io/badge/shipped-2.1.0-1E6B47?style=flat-square" alt="Shipped in 2.1.0" /> | Iron Arc Pro (payments in test mode) |
+| <img src="https://img.shields.io/badge/shipped-2.1.0-1E6B47?style=flat-square" alt="Shipped in 2.1.0" /> | Health check, Safe mode and "go easy on" joints |
+| <img src="https://img.shields.io/badge/shipped-2.1.0-1E6B47?style=flat-square" alt="Shipped in 2.1.0" /> | A much larger AI exercise catalogue: flies, crossovers, machine work |
+| <img src="https://img.shields.io/badge/shipped-2.1.0-1E6B47?style=flat-square" alt="Shipped in 2.1.0" /> | Reminders that name the day's planned session |
+| <img src="https://img.shields.io/badge/shipped-2.1.0-1E6B47?style=flat-square" alt="Shipped in 2.1.0" /> | Updates announced inside the app |
+| <img src="https://img.shields.io/badge/shipped-2.0.1-1E6B47?style=flat-square" alt="Shipped in 2.0.1" /> | Move a session to another day |
+| <img src="https://img.shields.io/badge/shipped-2.0.1-1E6B47?style=flat-square" alt="Shipped in 2.0.1" /> | A theme-aware date picker |
+| <img src="https://img.shields.io/badge/shipped-2.0.0-1E6B47?style=flat-square" alt="Shipped in 2.0.0" /> | AI plans with weekly recalibration and a plan coach |
+| <img src="https://img.shields.io/badge/shipped-2.0.0-1E6B47?style=flat-square" alt="Shipped in 2.0.0" /> | Analytics with a muscle body map |
+| <img src="https://img.shields.io/badge/shipped-2.0.0-1E6B47?style=flat-square" alt="Shipped in 2.0.0" /> | Five themes |
+| <img src="https://img.shields.io/badge/shipped-2.0.0-1E6B47?style=flat-square" alt="Shipped in 2.0.0" /> | Monthly PDF and Excel reports |
+| <img src="https://img.shields.io/badge/shipped-1.1.0-1E6B47?style=flat-square" alt="Shipped in 1.1.0" /> | Fast logging with records, rest timer and plate calculator |
 
 ---
 
