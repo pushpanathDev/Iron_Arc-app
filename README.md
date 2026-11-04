@@ -226,7 +226,6 @@ flowchart LR
 - [ ] Reminders that name the day's planned session
 - [ ] A much larger AI exercise catalogue (flies, crossovers, machine work)
 - [ ] Iron Arc Pro
->>>>>>> d7b8e8862c4b55120f243f7f523801e9bb53e27a
 
 ---
 
