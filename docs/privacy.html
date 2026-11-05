@@ -7,7 +7,7 @@
 <meta name="description" content="How the Iron Arc workout app collects, uses and protects your data.">
 <style>
   :root { --bg: #f6f7f9; --card: #ffffff; --text: #15181c; --soft: #4b535c; --line: #e2e5e9; --accent: #14805b; }
-  @media (prefers-color-scheme: dark) { :root { --bg: #111417; --card: #191c1f; --text: #e1e2e7; --soft: #bccac0; --line: #2a2e33; --accent: #22d47f; } }
+  @media (prefers-color-scheme: dark) { :root { --bg: #111417; --card: #191c1f; --text: #e1e2e7; --soft: #bccac0; --line: #2a2e33; --accent: #3ccb7f; } }
   * { box-sizing: border-box; }
   body { margin: 0; background: var(--bg); color: var(--text); font: 16px/1.6 "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
   main { max-width: 760px; margin: 0 auto; padding: 32px 16px 64px; }
@@ -31,7 +31,7 @@
 <main>
 <header>
   <h1>Iron Arc Privacy Policy</h1>
-  <p class="meta">Effective 3 November 2026 · Applies to the Iron Arc app for Android and its servers</p>
+  <p class="meta">Effective 5 November 2026 · Applies to the Iron Arc app for Android and its servers</p>
 </header>
 
 <div class="card">
@@ -49,12 +49,13 @@
   <tr><td><strong>Health check</strong></td><td>Only your yes/no answers to 8 questions, when you agreed to the AI terms, and, if you confirm it, the date a doctor cleared you. We don't ask for or store diagnoses.</td></tr>
   <tr><td><strong>Training data</strong></td><td>Workouts and sets, body weight entries, AI plans, achievements and custom exercises.</td></tr>
   <tr><td><strong>AI coach</strong></td><td>Your coach chat messages and its replies, thumbs up/down ratings, and replies you report (a copy is kept for review).</td></tr>
+  <tr><td><strong>Voice (Iron Arc Pro)</strong></td><td>When you tap the mic to speak your sets or a note, the app records until you tap it again. The recording is only used to turn your words into text, then deleted (see section 4). We keep the text, as your sets or note. The microphone is used only while you're recording.</td></tr>
   <tr><td><strong>Iron Arc Pro</strong></td><td>Your plan, trial and renewal dates, and receipts. Payments are currently test payments: no card, bank or UPI details are collected.</td></tr>
   <tr><td><strong>App settings</strong></td><td>Theme, kg/lb, your go-to rep count and remembered bar weights, so they follow you to another phone.</td></tr>
   <tr><td><strong>Trial fingerprint</strong></td><td>When a free trial starts, a one-way scrambled fingerprint of your email (a keyed hash, not the email itself). It's used only so the trial can be taken once per person.</td></tr>
   <tr><td><strong>On your phone only</strong></td><td>Saved data for offline use, an unfinished workout, and your reminder settings. Reminders are scheduled on your phone; we don't collect push notification tokens.</td></tr>
 </table>
-<p><strong>What we don't collect:</strong> no location, contacts, photos (other than a Google profile photo), advertising IDs, payment card details, or analytics and crash tracking.</p>
+<p><strong>What we don't collect:</strong> no location, contacts, voice recordings, photos (other than a Google profile photo), advertising IDs, payment card details, or analytics and crash tracking.</p>
 
 <h2>3. How we use it</h2>
 <ul>
@@ -66,9 +67,10 @@
   <li>To prevent abuse, for example daily limits on AI use.</li>
 </ul>
 
-<h2>4. The AI coach</h2>
+<h2>4. The AI coach and voice</h2>
 <p>To write plans and replies, the app sends Groq, our AI provider, what the AI needs: your training details (age, height and weight if given, goal, experience, equipment, training days, the areas you go easy on and your note), your recent workouts, your plan and your coach messages. It never sends your name, email or account IDs, and from the health check it shares only whether Safe mode is on, never your answers. We have turned on Groq's zero data retention setting for our account.</p>
 <p>The coach is AI. It gives general fitness guidance, not medical advice, and it can be wrong. It's for adults (18+) only.</p>
+<p><strong>Speaking your sets and notes.</strong> While you speak, your phone's Google speech recognition shows your words as you say them (with no connection, the phone's offline recognizer does). It's part of Android and follows Google's privacy policy. When you finish, the recording goes to Groq to get the exact words, with the exercise's name so it's spelled right. Our server passes it straight on without saving it, Groq handles it under the same zero data retention setting, and the app deletes it from your phone as soon as the words are back.</p>
 
 <h2>5. Who processes your data</h2>
 <p>We use these service providers to run Iron Arc. They process data on our behalf, only to provide their service:</p>
@@ -76,7 +78,7 @@
   <li><strong>Firebase Authentication (Google)</strong>: sign-in and email verification.</li>
   <li><strong>Supabase</strong>: our database (hosted in Singapore).</li>
   <li><strong>Render</strong>: the servers that run Iron Arc's backend.</li>
-  <li><strong>Groq</strong>: the AI model behind plans and the coach.</li>
+  <li><strong>Groq</strong>: the AI model behind plans and the coach, and the speech-to-text behind Speak your sets.</li>
   <li><strong>Resend</strong>: sends Iron Arc's emails.</li>
 </ul>
 <p>We don't sell or rent your data, and we don't share it for advertising. We'd only disclose it if the law requires us to.</p>

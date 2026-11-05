@@ -10,6 +10,33 @@ Every Iron Arc release, newest first.
 
 ---
 
+## 2.2.0
+
+<sub>NOVEMBER 2026 &nbsp;·&nbsp; SPEAK YOUR SETS, WHAT'S NEW</sub>
+
+Log a whole exercise by voice, and see what every update brings.
+
+#### Highlights
+
+- **Speak your sets.** Tap the mic and say every set at once, like "first set 60 kilos 10 reps, second set 70 for 8", and they're logged in order. Part of Iron Arc Pro.
+- **Speak your notes.** The mic in the note field writes what you say. Also part of Pro.
+- **What's new, in the app.** After each update, a quick look at what changed. Profile → App updates also shows what's coming next.
+- **A deeper Emerald.** The default theme's buttons in a richer, natural emerald with white labels.
+- **Clearer choices.** Two-button pop-ups sit side by side, and every delete, discard and remove looks the same.
+
+#### Also new
+
+- **Leaving a workout** offers "Keep logging" instead of "Cancel".
+- **The set card** slides softly under the exercise strip when the keyboard opens for a note.
+- **The privacy policy** covers voice: recordings are turned into text, then deleted.
+
+#### Coming next
+
+- **A super-powered coach.** A big upgrade to today's coach, with memory of your training and trends.
+- **Sharper voice logging.** Better with fast speech and more gym words.
+
+---
+
 ## 2.1.0
 
 <sub>NOVEMBER 2026 &nbsp;·&nbsp; PRO, SAFER COACHING, 95 EXERCISES</sub>

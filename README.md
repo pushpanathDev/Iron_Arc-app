@@ -18,7 +18,7 @@
 ![TypeScript](https://img.shields.io/badge/TypeScript-strict-3178C6?logo=typescript&logoColor=white)
 ![Node.js](https://img.shields.io/badge/Node.js-Express%205-339933?logo=nodedotjs&logoColor=white)
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-Prisma-4169E1?logo=postgresql&logoColor=white)
-![Tests](https://img.shields.io/badge/tests-465%20passing-22D47F?logo=jest&logoColor=white)
+![Tests](https://img.shields.io/badge/tests-500%20passing-0F7A3B?logo=jest&logoColor=white)
 
 </div>
 
@@ -26,7 +26,7 @@
 
 ---
 
-<div align="center"><img src="docs/images/stats.png" width="100%" alt="By the numbers: 465 automated tests (202 app, 263 server), 30,000+ lines of TypeScript in 242 files, 19 screens, 95 exercises for AI plans, 5 themes, 0 log lines in a release build" /></div>
+<div align="center"><img src="docs/images/stats.png" width="100%" alt="By the numbers: 500 automated tests (221 app, 279 server), 30,000+ lines of TypeScript in 276 files, 19 screens, 95 exercises for AI plans, 5 themes, 0 log lines in a release build" /></div>
 
 ---
 
@@ -54,15 +54,14 @@ Themes aren't a colour swap. Each one changes the **accent family** (buttons, pr
 
 ---
 
-## 🆕 What's new in 2.1.0
+## 🆕 What's new in 2.2.0
 
-- **Iron Arc Pro.** Unlimited AI plans and the plan coach chat, with a 7-day free trial. Free keeps one AI plan every 30 days. Payments are in test mode for now: no real money is charged.
-- **Go easy on your joints.** Pick knees, lower back, shoulders or wrists (or write your own), and plans and swaps leave out the exercises that load them.
-- **95 exercises for AI plans**, up from 32, each tagged with the joints it loads.
-- **A safer coach.** A health check first, Safe mode until a doctor clears you, and a way to rate or report any reply.
-- **Reminders that name the day's session**, settings that follow your account, and **updates in the app** (Profile → App updates checks any time).
+- **Speak your sets.** Tap the mic and say every set at once, like "first set 60 kilos 10 reps, second set 70 for 8", and they're logged in order. Part of Iron Arc Pro.
+- **Speak your notes.** The mic in the note field writes what you say. Recordings are turned into text, then deleted.
+- **What's new, in the app.** After each update, a quick look at what changed; Profile → App updates also shows what's coming next.
+- **A deeper Emerald**, side-by-side choices in pop-ups, and one calm red for every delete.
 
-See the [changelog](CHANGELOG.md) for everything, and for 2.0.1 and 2.0.0.
+See the [changelog](CHANGELOG.md) for everything, and for 2.1.0, 2.0.1 and 2.0.0.
 
 ---
 
@@ -193,7 +192,7 @@ flowchart LR
 | **Server** | Node.js · Express 5 · Prisma · PostgreSQL · Zod validation |
 | **AI** | A hosted LLM for plan generation, weekly recalibration, swaps and the coach |
 | **Auth** | Firebase Authentication (Google and email) |
-| **Quality** | Jest and Node's test runner: 465 tests across app and server |
+| **Quality** | Jest and Node's test runner: 500 tests across app and server |
 
 ---
 
@@ -201,8 +200,10 @@ flowchart LR
 
 | Status | Feature |
 |:--|:--|
-| <img src="https://img.shields.io/badge/up%20next-C98A2B?style=flat-square" alt="Up next" /> | **Speak your sets:** say "bench, 80 kilos, 8 reps" and the set fills itself in |
 | <img src="https://img.shields.io/badge/up%20next-C98A2B?style=flat-square" alt="Up next" /> | **A super-powered coach:** a big upgrade to today's coach, with memory of your training and trends |
+| <img src="https://img.shields.io/badge/up%20next-C98A2B?style=flat-square" alt="Up next" /> | **Sharper voice logging:** better with fast speech and more gym words |
+| <img src="https://img.shields.io/badge/shipped-2.2.0-1E6B47?style=flat-square" alt="Shipped in 2.2.0" /> | Speak your sets and notes (Pro): say every set at once and they're logged |
+| <img src="https://img.shields.io/badge/shipped-2.2.0-1E6B47?style=flat-square" alt="Shipped in 2.2.0" /> | What's new and Coming next, inside the app |
 | <img src="https://img.shields.io/badge/shipped-2.1.0-1E6B47?style=flat-square" alt="Shipped in 2.1.0" /> | Iron Arc Pro (payments in test mode) |
 | <img src="https://img.shields.io/badge/shipped-2.1.0-1E6B47?style=flat-square" alt="Shipped in 2.1.0" /> | Health check, Safe mode and "go easy on" joints |
 | <img src="https://img.shields.io/badge/shipped-2.1.0-1E6B47?style=flat-square" alt="Shipped in 2.1.0" /> | A much larger AI exercise catalogue: flies, crossovers, machine work |
