@@ -1,57 +1,155 @@
 <!doctype html>
 <html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Iron Arc</title>
-<meta name="description" content="Iron Arc: a strength-training app that remembers every set and builds your training week with AI.">
-<link rel="icon" href="email-logo.png">
-<style>
-  :root { --bg: #f6f7f9; --card: #ffffff; --text: #15181c; --soft: #4b535c; --line: #e2e5e9; --accent: #14805b; --button: #14805b; --button-edge: #14805b; --on-button: #ffffff; }
-  /* Dark: the app's Emerald, the button in its deep gloss with a darker rim. */
-  @media (prefers-color-scheme: dark) { :root { --bg: #111417; --card: #191c1f; --text: #e1e2e7; --soft: #bccac0; --line: #2a2e33; --accent: #3ccb7f; --button: linear-gradient(#1e9e55, #0f7a3b, #075a2b); --button-edge: #0a6632; --on-button: #ffffff; } }
-  * { box-sizing: border-box; }
-  /* dvh: the height you can see. Plain vh on phones counts the address bar too, which pushes the card below the middle. */
-  body { margin: 0; min-height: 100vh; min-height: 100dvh; display: flex; align-items: center; justify-content: center; background: var(--bg); color: var(--text); font: 16px/1.6 "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
-  main { width: 100%; max-width: 480px; padding: 32px 16px; text-align: center; }
-  img { width: 96px; height: 96px; border-radius: 22px; }
-  h1 { font-size: 32px; margin: 16px 0 4px; letter-spacing: 1px; }
-  p { color: var(--soft); margin: 0 0 24px; }
-  .download { display: inline-block; padding: 14px 24px; border-radius: 12px; background: var(--button); border: 1px solid var(--button-edge); color: var(--on-button); font-weight: 600; text-decoration: none; }
-  .note { font-size: 14px; margin-top: 12px; }
-  nav { margin-top: 32px; padding-top: 16px; border-top: 1px solid var(--line); font-size: 14px; }
-  nav a { color: var(--accent); margin: 0 10px; text-decoration: none; }
-</style>
-</head>
-<body>
-<main>
-  <img src="email-logo.png" alt="Iron Arc logo">
-  <h1>Iron Arc</h1>
-  <p>Log lifts in seconds, see real progress, and train to an AI plan that fits your week.</p>
-  <!-- Without the script (or if GitHub can't be reached) this opens the latest release's page. -->
-  <a class="download" id="download" href="https://github.com/pushpanathDev/Iron_Arc-app/releases/latest">Download for Android</a>
-  <p class="note" id="version">Android 7.0 or newer · free · no ads, no analytics, no trackers</p>
-  <nav>
-    <a href="privacy.html">Privacy policy</a>
-    <a href="https://github.com/pushpanathDev/Iron_Arc-app/releases">All releases</a>
-    <a href="https://github.com/pushpanathDev/Iron_Arc-app">About</a>
-  </nav>
-</main>
-<script>
-  // The newest release's APK, whatever it's called (each one carries its version, e.g. Iron-Arc-2.1.0.apk).
-  fetch("https://api.github.com/repos/pushpanathDev/Iron_Arc-app/releases/latest")
-    .then((res) => (res.ok ? res.json() : null))
-    .then((release) => {
-      const apk = release && release.assets.find((asset) => asset.name.endsWith(".apk"));
-      if (!apk) return;
-      const version = release.tag_name.replace(/^v/, "");
-      const button = document.getElementById("download");
-      button.href = apk.browser_download_url;
-      button.textContent = "Download v" + version;
-      const sizeMb = Math.round(apk.size / 1e6);
-      document.getElementById("version").textContent = "Iron Arc " + version + " for Android 7.0 or newer · " + sizeMb + " MB · free · no ads, no analytics, no trackers";
-    })
-    .catch(() => {});
-</script>
-</body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Iron Arc</title>
+    <meta
+      name="description"
+      content="Iron Arc: a strength-training app that remembers every set and builds your training week with AI."
+    />
+    <link rel="icon" href="email-logo.png" />
+    <style>
+      :root {
+        --bg: #f6f7f9;
+        --card: #ffffff;
+        --text: #15181c;
+        --soft: #4b535c;
+        --line: #e2e5e9;
+        --accent: #14805b;
+        --button: #14805b;
+        --button-edge: #14805b;
+        --on-button: #ffffff;
+      }
+      /* Dark: the app's Emerald, the button in its deep gloss with a darker rim. */
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bg: #111417;
+          --card: #191c1f;
+          --text: #e1e2e7;
+          --soft: #bccac0;
+          --line: #2a2e33;
+          --accent: #3ccb7f;
+          --button: linear-gradient(#1e9e55, #0f7a3b, #075a2b);
+          --button-edge: #0a6632;
+          --on-button: #ffffff;
+        }
+      }
+      * {
+        box-sizing: border-box;
+      }
+      /* dvh: the height you can see. Plain vh on phones counts the address bar too, which pushes the card below the middle. */
+      body {
+        margin: 0;
+        min-height: 100vh;
+        min-height: 100dvh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: var(--bg);
+        color: var(--text);
+        font:
+          16px/1.6 "Segoe UI",
+          Roboto,
+          Helvetica,
+          Arial,
+          sans-serif;
+      }
+      main {
+        width: 100%;
+        max-width: 480px;
+        padding: 32px 16px;
+        text-align: center;
+      }
+      img {
+        width: 96px;
+        height: 96px;
+        border-radius: 22px;
+      }
+      h1 {
+        font-size: 32px;
+        margin: 16px 0 4px;
+        letter-spacing: 1px;
+      }
+      p {
+        color: var(--soft);
+        margin: 0 0 24px;
+      }
+      .download {
+        display: inline-block;
+        padding: 14px 24px;
+        border-radius: 12px;
+        background: var(--button);
+        border: 1px solid var(--button-edge);
+        color: var(--on-button);
+        font-weight: 600;
+        text-decoration: none;
+      }
+      .note {
+        font-size: 14px;
+        margin-top: 12px;
+      }
+      nav {
+        margin-top: 32px;
+        padding-top: 16px;
+        border-top: 1px solid var(--line);
+        font-size: 14px;
+      }
+      nav a {
+        color: var(--accent);
+        margin: 0 10px;
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <img src="email-logo.png" alt="Iron Arc logo" />
+      <h1>Iron Arc</h1>
+      <p>
+        Log lifts in seconds, see real progress, and train to an AI plan that
+        fits your week.
+      </p>
+      <!-- Without the script (or if GitHub can't be reached) this opens the latest release's page. -->
+      <a
+        class="download"
+        id="download"
+        href="https://github.com/pushpanathDev/Iron_Arc-app/releases/latest"
+        >Download for Android</a
+      >
+      <p class="note" id="version">Android 7.0 or newer · Ads free</p>
+      <nav>
+        <a href="privacy.html">Privacy policy</a>
+        <a href="https://github.com/pushpanathDev/Iron_Arc-app/releases"
+          >All releases</a
+        >
+        <a href="https://github.com/pushpanathDev/Iron_Arc-app">About</a>
+      </nav>
+    </main>
+    <script>
+      // The newest release's APK, whatever it's called (each one carries its version, e.g. Iron-Arc-2.1.0.apk).
+      fetch(
+        "https://api.github.com/repos/pushpanathDev/Iron_Arc-app/releases/latest",
+      )
+        .then((res) => (res.ok ? res.json() : null))
+        .then((release) => {
+          const apk =
+            release &&
+            release.assets.find((asset) => asset.name.endsWith(".apk"));
+          if (!apk) return;
+          const version = release.tag_name.replace(/^v/, "");
+          const button = document.getElementById("download");
+          button.href = apk.browser_download_url;
+          button.textContent = "Download v" + version;
+          const sizeMb = Math.round(apk.size / 1e6);
+          document.getElementById("version").textContent =
+            "Iron Arc " +
+            version +
+            " for Android 7.0 or newer · " +
+            sizeMb +
+            " MB · free · no ads";
+        })
+        .catch(() => {});
+    </script>
+  </body>
 </html>
